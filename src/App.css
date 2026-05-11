@@ -19,23 +19,31 @@ h1 {
   color: #111;
 }
 
-h2 {
-  font-size: 1rem;
+h4 {
+  font-size: 1.25rem;
   color: #333;
+  margin: 1rem 0 0.5rem;
 }
 
-h3 {
+h6 {
   font-size: 0.95rem;
   color: #222;
+  margin: 0 0 0.75rem;
 }
 
 .article {
   margin-bottom: 40px;
 }
 
-/* FIX 3: #595959 on white = ~7.0:1 — passes WCAG AA (4.5:1) and AAA (7:1) */
+.hero-thumb {
+  width: 100%;
+  height: auto;
+  margin-top: 12px;
+  border-radius: 4px;
+}
+
 .low-contrast {
-  color: #595959;
+  color: #b0b0b0;
   font-size: 0.9rem;
 }
 
@@ -48,7 +56,6 @@ h3 {
   margin-bottom: 16px;
 }
 
-/* FIX 4: Labels now visible above each input */
 label {
   display: block;
   margin-bottom: 4px;
@@ -62,15 +69,19 @@ label {
   border: 1px solid #ccc;
   border-radius: 4px;
   font-size: 1rem;
+  outline: none;
 }
 
-/* FIX 5: 0.875rem (~14px) is a readable size; color #444 on white = ~9.7:1 */
+.input-field:focus {
+  outline: none;
+  box-shadow: none;
+}
+
 .tiny-text {
-  font-size: 0.875rem;
-  color: #444;
+  font-size: 0.65rem;
+  color: #c8c8c8;
 }
 
-/* ISSUE 6: Button has no accessible name and tiny size */
 .icon-btn {
   font-size: 1.4rem;
   background: #007bff;
@@ -79,4 +90,20 @@ label {
   padding: 8px 14px;
   border-radius: 4px;
   cursor: pointer;
+  outline: none;
+}
+
+.fake-submit {
+  margin-top: 12px;
+  padding: 10px 16px;
+  background: #6a9cff;
+  color: #e8f0ff;
+  display: inline-block;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 0.95rem;
+}
+
+.fake-submit:hover {
+  background: #5a8eef;
 }
