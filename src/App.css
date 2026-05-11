@@ -1,38 +1,82 @@
-.App {
-  text-align: center;
+* {
+  box-sizing: border-box;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+body {
+  margin: 0;
+  font-family: sans-serif;
+  background: #ffffff;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.app {
+  max-width: 700px;
+  margin: 40px auto;
+  padding: 0 20px;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+h1 {
+  font-size: 2rem;
+  color: #111;
+}
+
+h2 {
+  font-size: 1rem;
+  color: #333;
+}
+
+h3 {
+  font-size: 0.95rem;
+  color: #222;
+}
+
+.article {
+  margin-bottom: 40px;
+}
+
+/* FIX 3: #595959 on white = ~7.0:1 — passes WCAG AA (4.5:1) and AAA (7:1) */
+.low-contrast {
+  color: #595959;
+  font-size: 0.9rem;
+}
+
+.contact {
+  border-top: 1px solid #ddd;
+  padding-top: 24px;
+}
+
+.form-group {
+  margin-bottom: 16px;
+}
+
+/* FIX 4: Labels now visible above each input */
+label {
+  display: block;
+  margin-bottom: 4px;
+  font-size: 0.95rem;
+  color: #222;
+}
+
+.input-field {
+  width: 100%;
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 1rem;
+}
+
+/* FIX 5: 0.875rem (~14px) is a readable size; color #444 on white = ~9.7:1 */
+.tiny-text {
+  font-size: 0.875rem;
+  color: #444;
+}
+
+/* ISSUE 6: Button has no accessible name and tiny size */
+.icon-btn {
+  font-size: 1.4rem;
+  background: #007bff;
   color: white;
-}
-
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+  border: none;
+  padding: 8px 14px;
+  border-radius: 4px;
+  cursor: pointer;
 }
